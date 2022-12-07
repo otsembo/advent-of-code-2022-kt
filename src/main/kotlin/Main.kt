@@ -5,6 +5,6 @@ import day_1.solution
 fun main(){
 
     // solutions, day1
-    print("DAY 1: ${solution()}")
+    print("DAY 1: ${solution().toList().sum()}")
 
 }

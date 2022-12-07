@@ -4,18 +4,19 @@ import java.io.File
 
 // DAY 1 => https://adventofcode.com/2022/day/1
 
-fun solution(): Int{
+fun solution(): Triple<Int, Int, Int>{
     // max calories
-    var calories = 0
     var currElfCalories = 0
-
-    // solution
+    val caloriesList:MutableList<Int>  = emptyList<Int>().toMutableList()
     File("src/main/kotlin/day_1/input.txt").forEachLine {
         val data = it.trim()
-        currElfCalories = if (data.isEmpty()){
-            calories = calories.coerceAtLeast(currElfCalories); 0
-        } else currElfCalories + data.toInt()
+
+        if(data.isEmpty()){
+            caloriesList.add(currElfCalories)
+            currElfCalories = 0
+        }else{ currElfCalories += data.toInt() }
     }
 
-    return calories
+    caloriesList.sortDescending()
+    return Triple(first = caloriesList[0], second = caloriesList[1], third = caloriesList[2])
 }
