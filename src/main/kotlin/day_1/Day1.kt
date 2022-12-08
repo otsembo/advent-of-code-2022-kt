@@ -4,7 +4,7 @@ import java.io.File
 
 // DAY 1 => https://adventofcode.com/2022/day/1
 
-fun solution(): Triple<Int, Int, Int>{
+fun dayOne(): Triple<Int, Int, Int>{
     // max calories
     var currElfCalories = 0
     val caloriesList:MutableList<Int>  = emptyList<Int>().toMutableList()
