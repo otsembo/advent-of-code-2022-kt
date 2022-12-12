@@ -37,11 +37,14 @@ fun dayFour(): Int{
         val n1 = l1.size
         val n2 = l2.size
 
-        if(l1[0] >= l2[0] && l1[n1-1] <= l2[n2-1]  || l2[0] >= l1[0] && l2[n2-1] <= l1[n1-1] ){
-            pairs += 1
-            //println("1=>${pairData[0]}, 2=>${pairData[1]}")
-        }
+//        if(l1[0] >= l2[0] && l1[n1-1] <= l2[n2-1]  || l2[0] >= l1[0] && l2[n2-1] <= l1[n1-1] ){
+//            pairs += 1
+//            //println("1=>${pairData[0]}, 2=>${pairData[1]}")
+//        }
 
+        if( (l1[0] >= l2[0] && l1[0] <= l2[n2-1]) || (l1[0] <= l2[0] && l2[0] <= l1[n1-1])  ) {
+            pairs += 1
+        }
 
     }
 
