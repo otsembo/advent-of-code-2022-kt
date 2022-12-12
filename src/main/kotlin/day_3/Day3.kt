@@ -2,6 +2,8 @@ package day_3
 
 import java.io.File
 
+// DAY 3 => https://adventofcode.com/2022/day/3
+
 fun dayThree(): Int{
 
     var score = 0

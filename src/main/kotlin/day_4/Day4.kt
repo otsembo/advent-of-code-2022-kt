@@ -2,6 +2,8 @@ package day_4
 
 import java.io.File
 
+// DAY 4 => https://adventofcode.com/2022/day/4
+
 fun dayFour(): Int{
 
     var pairs = 0
