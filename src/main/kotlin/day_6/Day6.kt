@@ -9,32 +9,15 @@ fun daySix(): Int{
     // read the input line
     val input = File("src/main/kotlin/day_6/input.txt").readLines()[0]
 
-    val data0 = input.toCharArray()
-    val data = "zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw".toCharArray()
-
-    var recordedChars: MutableSet<Char> = emptySet<Char>().toMutableSet()
-    var count = 0
-
-    println("INPUT: ${data.toList()}")
-
     // loop through index and character
-    for ((index, character) in data.withIndex()){
-        if(!recordedChars.contains(character) && recordedChars.size == 4){
-            return (index + 1)
-        }else{
-            recordedChars.add(character)
+    for ((index, character) in input.withIndex()){
+        val endInd = if((14 + index ) <= input.length) (13 + index) else (input.length - 1)
+        val sub = input.substring(index .. endInd)
+        val subSet = sub.toCharArray().toMutableSet()
+        if(subSet.size == sub.length){
+            return (index + subSet.size)
         }
-//        if(recordedChars.contains(character)){
-//            count = 0
-//            recordedChars = emptySet<Char>().toMutableSet()
-//        }else{
-//
-//            if(count == 3){
-//                return (index + 1)
-//            }
-//            recordedChars.add(character)
-//            count += 1
-//        }
     }
+
     return -1
 }
