@@ -42,20 +42,14 @@ fun dayFive(): List<String>{
             val nItems = movementData[0]
             val movementIndices = from.size - nItems until from.size
 
-            println("FROM: $from")
-            println("TO: $to")
-            println("nItems: $nItems")
-
             val fromStack: Stack<String> = Stack()
 
             movementIndices.forEach { _ ->
                 fromStack.push(from[0].toString())
                 from.removeAt(0)
             }
-
             // ADD ALL IN STACK ORDER
             to.addAll(0, fromStack)
-
         }
     }
 

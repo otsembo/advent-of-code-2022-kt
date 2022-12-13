@@ -3,6 +3,7 @@ import day_2.dayTwo
 import day_3.dayThree
 import day_4.dayFour
 import day_5.dayFive
+import day_6.daySix
 
 // Main
 
@@ -22,5 +23,8 @@ fun main(){
 
     // day 5
     println("DAY 5: ${dayFive()}")
+
+    // day 6
+    println("DAY 6: ${daySix()}")
 
 }
